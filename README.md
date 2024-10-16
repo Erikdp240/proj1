@@ -1,5 +1,5 @@
-# proj1
+# Project 1 - Erik Pacheco
 (Updated as projects are coded)
 This folder would contain some simple projects coded in Python:
-* Quiz.py - A made up quiz game of sorts that works through user input.
-* Calc.py - A calculator app that works through the terminal and handles various operations.
+* Quiz.py - A made-up quiz game that works through user input.
+* Calc.py - A calculator app that handles various operations through the terminal.
