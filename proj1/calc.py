@@ -7,27 +7,43 @@ import sys
 
 def do_op(op, i1, i2):
   if op == 'add':
-    result = i1 + i2
+    return i1 + i2, '+'
   elif op == 'sub':
-    result = i1 - i2
+    return i1 - i2, '-'
   elif op == 'mul':
-    result = i1 * i2
+    return i1 * i2, '*'
   elif op == 'div':
-    result = i1 / i2
+    return i1 / i2, '/'
   elif op == 'gt':
-    result = True if i1 > i2 else False
+    if i1 > i2:
+      return True, '>'
+    else:
+      return False, '>'
   elif op == 'ge':
-    result = True if i1 >= i2 else False
+    if i1 >= i2:
+      return True, '>='
+    else:
+      return False, '>='
   elif op == 'lt':
-    result = True if i1 < i2 else False
+    if i1 < i2:
+      return True, '<'
+    else:
+      return False, '<'
   elif op == 'le':
-    result = True if i1 <= i2 else False
+    if i1 <= i2:
+      return True, '<='
+    else:
+      return False, '<='
   elif op == 'eq':
-    result = True if i1 == i2 else False
+    if i1 == i2:
+      return True, '='
+    else:
+      return False, '='
   elif op == 'neq':
-    result = True if i1 != i2 else False
-
-  return result
+    if i1 != i2:
+      return True, '!='
+    else:
+      return False, '!='
 
 def main():
   op = sys.argv[1]
@@ -38,7 +54,7 @@ def main():
     print("ERROR: The operation argument is invalid.")
     sys.exit(1)
 
-  result = do_op(op, i1, i2)
+  result, op = do_op(op, i1, i2)
 
   print(f"{i1} {op} {i2} = {result}")
 
